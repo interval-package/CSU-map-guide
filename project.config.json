@@ -1,0 +1,82 @@
+{
+    "description": "中南大学校园导航",
+    "setting": {
+        "urlCheck": true,
+        "es6": true,
+        "postcss": true,
+        "minified": true,
+        "newFeature": true,
+        "babelSetting": {
+            "ignore": [],
+            "disablePlugins": [],
+            "outputPath": ""
+        },
+        "ignoreUploadUnusedFiles": true,
+        "coverView": false,
+        "enhance": false,
+        "showShadowRootInWxmlPanel": false,
+        "packNpmRelationList": []
+    },
+    "compileType": "miniprogram",
+    "condition": {
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "详情页",
+                    "pathName": "pages/detail/detail",
+                    "query": ""
+                },
+                {
+                    "name": "搜索",
+                    "pathName": "pages/search/search",
+                    "query": ""
+                },
+                {
+                    "name": "搜索",
+                    "pathName": "pages/search/search",
+                    "query": "学院"
+                },
+                {
+                    "name": "路径导航",
+                    "pathName": "pages/path/path",
+                    "query": ""
+                },
+                {
+                    "name": "导航",
+                    "pathName": "pages/navigate/navigate",
+                    "query": ""
+                },
+                {
+                    "name": "导航详情",
+                    "pathName": "pages/path/detail/detail",
+                    "query": ""
+                },
+                {
+                    "name": "公交",
+                    "pathName": "pages/bus/bus",
+                    "query": ""
+                },
+                {
+                    "name": "校园简介",
+                    "pathName": "pages/campus/campus",
+                    "query": ""
+                },
+                {
+                    "name": "导航首页",
+                    "pathName": "pages/index/index",
+                    "query": ""
+                }
+            ]
+        }
+    },
+    "editorSetting": {
+        "tabIndent": "insertSpaces",
+        "tabSize": 4
+    },
+    "appid": "wxc070fd9e95fc5fd8",
+    "libVersion": "2.30.0",
+    "packOptions": {
+        "ignore": [],
+        "include": []
+    }
+}

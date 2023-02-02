@@ -1,0 +1,20 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/campus/campus",
+    "pages/index/index",
+    "pages/detail/detail",
+    "pages/search/search",
+    "pages/path/path",
+    "pages/navigate/navigate",
+    "pages/path/detail/detail",
+    "pages/bus/bus",
+    "pages/bus/detail/detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#4E7FC4",
+    "navigationBarTitleText": "CSU tutorial",
+    "navigationBarTextStyle": "white"
+  }
+}
