@@ -3,9 +3,10 @@ class Config {
 
   }
 }
-// 本地：http://map_hnlg.cn/index.php/api/v1
+
 // API接口根url
-Config.baseUrl = 'http://map_hnlg.cn/index.php/api/v1';
+// Config.baseUrl = 'http://192.168.43.39:8080';
+Config.baseUrl = 'http://localhost:8080';
 // 缓存有效期(毫秒)
 Config.expired = 7200000;
 

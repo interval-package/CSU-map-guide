@@ -97,12 +97,16 @@ Page({
   navigationPoints(fromsCoordinate, toCoordinate, pathType) {
     PathData.showLoading();
     PathData.mapNavigation(fromsCoordinate, toCoordinate, pathType, this.callback); //默认是驾车
+    wx.hideLoading();
   },
   callback(res) {
+    console.log(res);
     let data = res.data.result.routes;
+    console.log(data);
     if (!PathData.isContainKey(data, 'mode')) {
       if (data === undefined || data.length == 0) {
         PathData.showModal('该路段暂未开通公交', false);
+        wx.hideLoading();
       } else {
         this.data.busStorage = 'transit-' + this.data.toCoord + this.data.fromCoord;
         // 将详细路径指引存储在缓存中
@@ -123,6 +127,9 @@ Page({
         PathData.showModal('起点终点距离过长');
         return;
       }
+
+      console.log("start navigate");
+
       this.data.keyStorage = data[0].mode + '-' + this.data.toCoord + this.data.fromCoord;
       // 将详细路径指引存储在缓存中
       PathData.setLocationStorage(this.data.keyStorage, data[0].steps, (res) => {

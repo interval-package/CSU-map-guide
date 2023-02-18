@@ -4,7 +4,7 @@
   <view class='map-main'>
     <view class='scroll-main'>
       <scroll-view class="scroll" scroll-x="true" scroll-with-animatio="true">
-        <view class="scroll-item" wx:for="{{SortList}}" wx:key="{{item.id}}">
+        <view class="scroll-item" wx:for="{{SortList}}" wx:key="id">
           <text wx:if="{{sortId==item.id}}" class='active'>{{item.name}}</text>
           <text wx:else bindtap="onSortTap" data-id="{{item.id}}">{{item.name}}</text>
         </view>

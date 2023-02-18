@@ -16,5 +16,11 @@
     "navigationBarBackgroundColor": "#4E7FC4",
     "navigationBarTitleText": "CSU tutorial",
     "navigationBarTextStyle": "white"
-  }
+  },
+  "permission": {
+    "scope.userLocation": {"desc":"你的位置信息将用于小程序位置接口的效果展示"}
+    },
+    "requiredPrivateInfos": [
+        "getLocation"
+    ]
 }

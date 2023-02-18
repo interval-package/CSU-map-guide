@@ -121,7 +121,8 @@ class Base {
       data: {
         from: froms,
         to: to,
-        key: Config.key
+        key: Config.key,
+        // SK: 'TjExzmBAAUKViJWlnCdTkgUuz73C1mZP'
       },
       method: 'GET',
       header: {
@@ -144,7 +145,9 @@ class Base {
         callback(res)
       },
       fail: function (err) {
+          console.log(err);
         callback(err)
+
         // wx.showModal({
         //   title: '提示',
         //   content: '你点击了拒绝授权，将无法进行下一步操作，请先同意授权',

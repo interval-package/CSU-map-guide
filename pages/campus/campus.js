@@ -26,6 +26,7 @@ Page({
   _loadDetail: function () {
     let detail_id = 2;
     CampusData.getDetailById(detail_id, (res) => {
+        console.log(res);
       this.setData({
         detailInfo: res
       });

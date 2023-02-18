@@ -1,5 +1,5 @@
 <template name="locationList">
-  <view class='list-item' wx:for="{{data}}" wx:key="item.id" id="view-{{item.id}}">
+  <view class='list-item' wx:for="{{data}}" wx:key="id" id="view-{{item.id}}">
     <view class='list-item-main' data-listid='{{item.id}}' bindtap="onMarkerDetail">
       <image class='item-img' src='{{item.image.url}}'></image>
       <view class='item-name'>

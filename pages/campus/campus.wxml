@@ -3,7 +3,8 @@
     <!-- 明德任责 -->
     <view class='banner'>
       <swiper indicator-dots="true" autoplay="true" class="swiper" indicator-active-color="#fff" circular="true">
-        <block wx:for="{{banner}}" wx:key="{{item.id}}">
+        <!-- <block wx:for="{{banner}}" wx:key="{{item.id}}"> -->
+        <block wx:for="{{banner}}" wx:key="id">
           <swiper-item class="banner-item" data-id="{{item.id}}">
             <image class="item-image" src="{{item.image.url}}" mode="aspectFill" />
           </swiper-item>

@@ -7,6 +7,7 @@ Page({
     navigationIcon: "../../image/icon/navigation.png",
   },
   onLoad: function (options) {
+      console.log(options);
     DetailData.showLoading();
     // 点击后获取的位置ID值
     this.data.id = options.id;
