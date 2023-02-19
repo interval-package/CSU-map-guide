@@ -142,6 +142,7 @@ Page({
    * 2：跳转到搜索页
    */
   onControlsTap(event) {
+      console.log(event);
     if (event.controlId == 1) {
       this.moveToLocation();
     } else if (event.controlId == 2) {

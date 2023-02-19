@@ -143,9 +143,36 @@ class path_parser(parser):
             pass
 
         elif self.tars[1] == "search":
+            _all = self.data_search(self.tars[2])
+            data = []
+            for i, tar in enumerate(_all):
+                data.append({
+                    "items": [{"id": i+1}],
+                    "id": i+1,
+                    "name": tar["loc_name"],
+                    "image": {"url": tar["img_url"]},
+                    "coordinate_items": {
+                        "id": i+1,
+                        "lat": tar["lat"],
+                        "lon": tar["lon"],
+                    },
+                    "lat": tar["lat"],
+                    "lon": tar["lon"],
+                })
             pass
 
         return json.dumps(data).encode()
+
+    def data_search(self, tar):
+        cur = sql.execute(f"select * from school_locs where loc_name like '%{tar}%'")
+        res = []
+        cols = [i[0] for i in cur.description]
+        for tar in cur.fetchall():
+            temp = {}
+            for i, j in zip(cols, tar):
+                temp[i] = j
+            res.append(temp)
+        return res
 
     pass
 

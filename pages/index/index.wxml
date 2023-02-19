@@ -11,14 +11,25 @@
       </scroll-view>
     </view>
     <view class='main' style='height:{{second_height}}rpx'>
-      <map id='map-container' class="map" bindmarkertap="onMarkerTap" longitude="{{currentLon}}" latitude="{{currentLat}}" markers="{{locationArr}}" scale="{{mapScale}}" controls="{{controls}}" bindcontroltap='onControlsTap' bindtap="closeList" polyline="{{polyline}}"
+      <map id='map-container' class="map" 
+      bindmarkertap="onMarkerTap" 
+      longitude="{{currentLon}}" 
+      latitude="{{currentLat}}" 
+      markers="{{locationArr}}" 
+      scale="{{mapScale}}" 
+      controls="{{controls}}" 
+      bindcontroltap='onControlsTap' 
+      bindtap="closeList" 
+      polyline="{{polyline}}"
         show-location wx:if="{{showIndexMap}}" />
     </view>
+
     <view class='locatioin-list' style="height:{{listHeight}}rpx">
       <view class='listTop' bindtap="onCloseList">
         <text class='count'>共有{{listArr.length}}个点位</text>
         <image wx:if="{{showList}}" class='topImg' src="../../image/icon/drop.png"></image>
         <image wx:else class='topImg rotate' src="../../image/icon/drop.png"></image>
+        <image bindtap="onControlSearch" class='topImg' src="../../image/icon/search.png"></image>
       </view>
       <scroll-view wx:if="{{showList}}" scroll-y="true" class='list-scroll' scroll-with-animation="true" scroll-into-view="view-{{toView}}">
         <template is="locationList" data="{{data:listArr,active:toView}}" />
